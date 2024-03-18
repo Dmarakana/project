@@ -53,13 +53,13 @@ const EmailVerification = () => {
         to: location.state.email,
       });
       // window.location.href = `/Enterotp?email=${location.state.pemail}`; // Change the URL to the desired destination
-      navigate("/Enterotp", {
-        state: {
-          email: location.state.pemail,
-          username: location.state.pfname,
-          password: location.state.ppassword,
-        },
-      });
+      // navigate("/Enterotp", {
+      //   state: {
+      //     email: location.state.pemail,
+      //     username: location.state.pfname,
+      //     password: location.state.ppassword,
+      //   },
+      // });
     } catch (error) {
       console.error("Error sending OTP email:", error);
       alert("Failed to send OTP. Please try again later.");
