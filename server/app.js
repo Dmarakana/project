@@ -21,8 +21,8 @@ mongoose
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "khanakhajana262002@gmail.com",
-    pass: "Khanakhajana@2002",
+    user: "dmarakana564@rku.ac.in",
+    pass: "D0579838",
   },
 });
 
@@ -36,7 +36,7 @@ app.post("/send-email", (req, res) => {
   const email = to;
   const otp = Math.floor(10000 + Math.random() * 90000);
   const mailOptions = {
-    from: "khanakhajana262002@gmail.com",
+    from: "dmarakana564@rku.ac.in",
     to: to,
     subject: "Your OTP",
     text: `Your OTP is: ${otp}`,
