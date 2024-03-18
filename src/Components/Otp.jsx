@@ -30,7 +30,7 @@ const EmailVerification = () => {
       inputRefs[index].current.focus();
     }
 
-    // Update input value to only contain numbers
+    // Upd
     input.value = value;
 
     // Update OTP state
