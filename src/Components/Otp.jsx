@@ -15,9 +15,9 @@ const EmailVerification = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const [exist, setexist] = useState("");
+  const [exist, setExist] = useState(false); // Change state type to boolean
 
-  const [otp, setOtp] = useState(false); // State to store OTP
+  const [otp, setOtp] = useState(""); // State to store OTP
 
   const handleChange = (index, e) => {
     const input = e.target;
@@ -26,13 +26,6 @@ const EmailVerification = () => {
     if (value.length === 1 && index < inputRefs.length - 1) {
       inputRefs[index + 1].current.focus();
     }
-
-    if (otp.length == 5) {
-      inputRefs[index].current.focus();
-    }
-
-    // Upd
-    input.value = value;
 
     // Update OTP state
     const newOtp = inputRefs.map((ref) => ref.current.value).join("");
@@ -50,20 +43,12 @@ const EmailVerification = () => {
 
   const sendEmail = async () => {
     inputRefs.forEach((ref) => {
-      ref.current.value = null;
+      ref.current.value = ""; // Clear input fields
     });
     try {
       await axios.post("http://localhost:3000/send-email", {
         to: location.state.email,
       });
-      // window.location.href = `/Enterotp?email=${location.state.pemail}`; // Change the URL to the desired destination
-      // navigate("/Enterotp", {
-      //   state: {
-      //     email: location.state.pemail,
-      //     username: location.state.pfname,
-      //     password: location.state.ppassword,
-      //   },
-      // });
     } catch (error) {
       console.error("Error sending OTP email:", error);
       alert("Failed to send OTP. Please try again later.");
@@ -73,28 +58,22 @@ const EmailVerification = () => {
   const check = async () => {
     setLoading(true); // Set loading state to true when sending email
     try {
-      await axios.post("http://localhost:3000/check", {
+      const response = await axios.post("http://localhost:3000/check", {
         email: location.state.email,
         username: location.state.username,
         password: location.state.password,
         otp: otp,
       });
 
-      if (exist == true) {
+      setExist(response.data.exist); // Set exist based on response
+      if (response.data.exist) {
         navigate("/Home");
       }
-      // navigate("/Enterotp", {
-      //   state: {
-      //     pemail: location.state.pemail,
-      //     fullname: location.state.pfname,
-      //     password: location.state.ppassword,
-      //   },
-      // });
     } catch (error) {
       console.error("Error : ", error);
-      alert("somthing wrong.");
+      alert("Something went wrong.");
     } finally {
-      setLoading(false); // Reset loading state when  process completes
+      setLoading(false); // Reset loading state when process completes
     }
   };
 
@@ -143,7 +122,7 @@ const EmailVerification = () => {
                 </div>
               ) : (
                 <button
-                  type="submit"
+                  type="button" // Change type to button to prevent form submission
                   onClick={check}
                   className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
                 >
