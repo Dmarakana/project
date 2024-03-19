@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -15,8 +15,9 @@ const EmailVerification = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+  const [exist, setexist] = useState("");
 
-  const [otp, setOtp] = useState(""); // State to store OTP
+  const [otp, setOtp] = useState(false); // State to store OTP
 
   const handleChange = (index, e) => {
     const input = e.target;
@@ -48,6 +49,9 @@ const EmailVerification = () => {
   const [loading, setLoading] = useState(false); // State to manage loading state
 
   const sendEmail = async () => {
+    inputRefs.forEach((ref) => {
+      ref.current.value = null;
+    });
     try {
       await axios.post("http://localhost:3000/send-email", {
         to: location.state.email,
@@ -76,6 +80,9 @@ const EmailVerification = () => {
         otp: otp,
       });
 
+      if (exist == true) {
+        navigate("/Home");
+      }
       // navigate("/Enterotp", {
       //   state: {
       //     pemail: location.state.pemail,
@@ -106,11 +113,12 @@ const EmailVerification = () => {
           </NavLink>
           <div>
             <h2 className="mt-8 text-4xl font-bold ">Verification</h2>
+            <label>{exist}</label>
           </div>
           <div className="mt-4 text-center">
             <p>We have sent OTP to your Email Id</p>
           </div>
-          <form className="mt-5 space-y-6" onSubmit={check}>
+          <form className="mt-5 space-y-6">
             <div className="flex flex-col space-y-16">
               <div className="flex flex-row items-center justify-between mx-auto w-full max-w-xs">
                 {[...Array(5)].map((_, index) => (
@@ -136,6 +144,7 @@ const EmailVerification = () => {
               ) : (
                 <button
                   type="submit"
+                  onClick={check}
                   className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
                 >
                   Verify

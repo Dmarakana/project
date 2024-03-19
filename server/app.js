@@ -42,19 +42,6 @@ app.post("/send-email", (req, res) => {
     text: `Your OTP is: ${otp}`,
   };
 
-  try {
-    const existingUser = OtpVerification.findOne({ email });
-    if (existingUser) {
-      console.log("user is exist");
-    } else {
-      console.log("user not exist");
-    }
-    // Delete all documents with the provided email
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
-
   async function run() {
     try {
       const existingUser = await OtpVerification.findOne({ email });
@@ -118,17 +105,19 @@ app.post("/insert", async (req, res) => {
 app.post("/check", async (req, res) => {
   try {
     const { email, username, password, otp } = req.body;
+    let exist = false;
     const existingUser = await OtpVerification.findOne({ email, otp });
     console.log(email);
     console.log(otp);
     if (existingUser) {
       console.log("user exist");
+      exist = true;
 
       //insert code hear
     } else {
       console.log("user not exist");
     }
-    // Delete all documents with the provided email
+    res.json(exist);
   } catch (error) {
     console.error(error);
     res.status(500).send("Server Error");
