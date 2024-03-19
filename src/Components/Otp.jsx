@@ -15,7 +15,6 @@ const EmailVerification = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const [exist, setExist] = useState(false); // Change state type to boolean
 
   const [otp, setOtp] = useState(""); // State to store OTP
 
@@ -34,17 +33,17 @@ const EmailVerification = () => {
 
   const handleKeyDown = (index, e) => {
     if (e.key === "Backspace" && index > 0 && !e.target.value) {
-      // Move to previous input field when backspace is pressed and current field is empty
       inputRefs[index - 1].current.focus();
     }
   };
 
-  const [loading, setLoading] = useState(false); // State to manage loading state
-
+  const [loading, setLoading] = useState(false);
   const sendEmail = async () => {
+    // Clear input fields
     inputRefs.forEach((ref) => {
-      ref.current.value = ""; // Clear input fields
+      ref.current.value = "";
     });
+
     try {
       await axios.post("http://localhost:3000/send-email", {
         to: location.state.email,
@@ -56,7 +55,8 @@ const EmailVerification = () => {
   };
 
   const check = async () => {
-    setLoading(true); // Set loading state to true when sending email
+    setLoading(true);
+
     try {
       const response = await axios.post("http://localhost:3000/check", {
         email: location.state.email,
@@ -64,16 +64,18 @@ const EmailVerification = () => {
         password: location.state.password,
         otp: otp,
       });
-
-      setExist(response.data.exist); // Set exist based on response
-      if (response.data.exist) {
-        navigate("/Home");
+      if (response.data == true) {
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
       }
     } catch (error) {
       console.error("Error : ", error);
       alert("Something went wrong.");
     } finally {
-      setLoading(false); // Reset loading state when process completes
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
     }
   };
 
@@ -92,7 +94,6 @@ const EmailVerification = () => {
           </NavLink>
           <div>
             <h2 className="mt-8 text-4xl font-bold ">Verification</h2>
-            <label>{exist}</label>
           </div>
           <div className="mt-4 text-center">
             <p>We have sent OTP to your Email Id</p>
