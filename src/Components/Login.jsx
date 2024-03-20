@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [message, setmessage] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +21,41 @@ function Login() {
     if (!password || !password.trim()) {
       alert("Please enter your password.");
     }
+
     console.log("Email:", email);
     console.log("Password:", password);
+  };
+
+  const login = async () => {
+    setLoading(true);
+
+    try {
+      const response = await axios.post("http://localhost:3000/login", {
+        email: email,
+        password: password,
+      });
+
+      console.log(response.data);
+      if (response.data == true) {
+        setTimeout(() => {
+          navigate("/Home", {
+            state: {
+              email: email,
+              password: password,
+            },
+          });
+        }, 1000);
+      } else {
+        setmessage("Invalid Email Id And Password");
+      }
+    } catch (error) {
+      console.error("Error : ", error);
+      alert("Something went wrong.");
+    } finally {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    }
   };
 
   return (
@@ -30,7 +69,7 @@ function Login() {
         <div>
           <h2 className="mt-8 text-4xl font-bold text">LOGIN</h2>
         </div>
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+        <form className="mt-8 space-y-6">
           <input type="hidden" name="remember" defaultValue="true" />
           <div>
             <div className="relative">
@@ -101,14 +140,24 @@ function Login() {
               </a>
             </div>
           </div>
+          <span className="text-center text-red-600">
+            <p>{message}</p>
+          </span>
 
-          <div>
-            <button
-              type="submit"
-              className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
-            >
-              Login
-            </button>
+          <div className="mt-9 text-center">
+            {loading ? (
+              <div className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none">
+                <div className="animate-spin rounded-full h-7 w-7 border-t-2 border-b-2 border-white"></div>
+              </div>
+            ) : (
+              <button
+                onClick={login}
+                type="submit"
+                className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
+              >
+                Login
+              </button>
+            )}
           </div>
         </form>
         <div className="mt-9 text-center">

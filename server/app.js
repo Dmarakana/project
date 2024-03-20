@@ -121,6 +121,25 @@ app.post("/check", async (req, res) => {
   }
 });
 
+app.post("/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    let userexist = false;
+    const existingUser = await User.findOne({ email, password });
+
+    if (existingUser) {
+      userexist = true;
+      console.log(" user exist");
+    } else {
+      console.log(" user not exist");
+    }
+    res.json(userexist);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
 // recipes  data
 const pcatagories = [
   {

@@ -42,21 +42,21 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex justify-end ">
-            <NavLink to="/">
-              <button className="bg-orange-500 text-white md:px-4 ld:px-4 md:py-1 ld:py-1 rounded md:ml-4  ld:ml-4  md:mt-0 ld:mt-0 md:mr-0 ld:mr-0 -mt-28">
-                Login
-              </button>
-            </NavLink>
-            <NavLink to="/Register">
-              <button className="bg-orange-500 text-white md:px-4 ld:px-4 md:py-1 ld:py-1 rounded md:ml-4 ld:ml-4 md:mt-0 ld:mt-0 -mt-28">
-                Register
-              </button>
-            </NavLink>
             <button>
               <NavLink to="/Profile">
                 <img src="/account.png" className="h-8 w-8 ml-4" />
               </NavLink>
             </button>
+            <NavLink to="/">
+              <button className="bg-orange-500 text-white md:px-4 ld:px-4 md:py-1 ld:py-1 rounded md:ml-4  ld:ml-4  md:mt-0 ld:mt-0 md:mr-0 ld:mr-0 -mt-28">
+                Logout
+              </button>
+            </NavLink>
+            {/* <NavLink to="/Register">
+              <button className="bg-orange-500 text-white md:px-4 ld:px-4 md:py-1 ld:py-1 rounded md:ml-4 ld:ml-4 md:mt-0 ld:mt-0 -mt-28">
+                Register
+              </button>
+            </NavLink> */}
           </div>
         </div>
       </nav>
