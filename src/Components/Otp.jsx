@@ -18,6 +18,9 @@ const EmailVerification = () => {
 
   const [otp, setOtp] = useState(""); // State to store OTP
 
+  const [countdown, setCountdown] = useState(30);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
   const handleChange = (index, e) => {
     const input = e.target;
     let value = input.value.replace(/\D/, ""); // Remove non-numeric characters
@@ -40,6 +43,8 @@ const EmailVerification = () => {
   const [loading, setLoading] = useState(false);
   const sendEmail = async () => {
     // Clear input fields
+    setCountdown(15);
+    setIsButtonDisabled(true);
     inputRefs.forEach((ref) => {
       ref.current.value = "";
     });
@@ -78,6 +83,16 @@ const EmailVerification = () => {
       }, 1000);
     }
   };
+
+  useEffect(() => {
+    let timer;
+    if (countdown > 0) {
+      timer = setTimeout(() => setCountdown(countdown - 1), 1000);
+    } else {
+      setIsButtonDisabled(false);
+    }
+    return () => clearTimeout(timer);
+  }, [countdown]);
 
   return (
     <>
@@ -138,8 +153,9 @@ const EmailVerification = () => {
               <button
                 onClick={sendEmail}
                 className="font-medium text-lg text-orange-500"
+                disabled={isButtonDisabled}
               >
-                Resend
+                {isButtonDisabled ? `Resend (${countdown})` : "Resend"}
               </button>
             </p>
           </div>

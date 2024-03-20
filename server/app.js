@@ -84,22 +84,9 @@ app.post("/send-email", (req, res) => {
 
 // Define a User schema
 const User = mongoose.model("users", {
-  fullname: String,
+  username: String,
   email: String,
   password: String,
-});
-
-// POST endpoint to insert user data
-app.post("/insert", async (req, res) => {
-  try {
-    const { name, email, password } = req.body;
-    const user = new User({ name, email, password });
-    await user.save();
-    res.status(201).json(user);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
 });
 
 app.post("/check", async (req, res) => {
@@ -111,6 +98,16 @@ app.post("/check", async (req, res) => {
     console.log(otp);
     if (existingUser) {
       console.log("user exist");
+      try {
+        //register user detailse
+        const user = User({ username, email, password });
+        await user.save();
+      } catch (error) {
+        console.error(error);
+      }
+
+      //user data insert here
+
       exist = true;
 
       //insert code hear
