@@ -587,7 +587,7 @@ const recipe = [
   {
     Id: 7,
     Name: "Chocolate Mousse",
-    Src: "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2024-01-triple-chocolate-mousse-cake%2Ftriple-chocolate-mousse-cake-0739ttps://www.example.com/chocolate-mousse",
+    Src: "https://www.dessertfortwo.com/wp-content/uploads/2018/02/Chocolate-Mousse-8-720x720.jpg",
     Categorie: "Dessert",
     Star: 5,
     Text: "Silky smooth and decadently rich, chocolate mousse is a delightful dessert that will satisfy any chocolate lover.",
