@@ -9,6 +9,12 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!email || !email.trim()) {
+      alert("Please enter your email address.");
+    }
+    if (!password || !password.trim()) {
+      alert("Please enter your password.");
+    }
     console.log("Email:", email);
     console.log("Password:", password);
   };
@@ -40,9 +46,8 @@ function Login() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                required
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value).trim()}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
                 placeholder="Email"
               />
@@ -62,9 +67,8 @@ function Login() {
                 name="password"
                 type={showPassword ? "text" : "password"}
                 autoComplete="current-password"
-                required
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value).trim()}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
                 placeholder="Password"
               />
@@ -99,14 +103,12 @@ function Login() {
           </div>
 
           <div>
-            <NavLink to="Home">
-              <button
-                type="submit"
-                className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
-              >
-                Login
-              </button>
-            </NavLink>
+            <button
+              type="submit"
+              className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
+            >
+              Login
+            </button>
           </div>
         </form>
         <div className="mt-9 text-center">
