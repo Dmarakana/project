@@ -71,25 +71,25 @@ export default function Navbar() {
 
       <div className="flex justify-center text-lg font-bold md:mt-2 mt-2">
         <NavLink to="/Home">
-          <a className="md:px-16 md:pb-4 ld:px-16 ld:pb-4 pb-2 px-6 ">
+          <p className="md:px-16 md:pb-4 ld:px-16 ld:pb-4 pb-2 px-6 ">
             Homepage
-          </a>
+          </p>
         </NavLink>
         <NavLink to="/Recipe">
-          <a className="md:px-16 md:pb-4 ld:px-16 ld:pb-4 pb-2 px-6">Recipe</a>
+          <p className="md:px-16 md:pb-4 ld:px-16 ld:pb-4 pb-2 px-6">Recipe</p>
         </NavLink>
         <NavLink to="/Categories">
-          <a className="md:px-16 md:pb-4 ld:px-16 ld:pb-4 pb-2 px-6">
+          <p className="md:px-16 md:pb-4 ld:px-16 ld:pb-4 pb-2 px-6">
             Categories
-          </a>
+          </p>
         </NavLink>
         <NavLink to="/Favorites">
-          <a
+          <p
             href="Catrgories"
             className="md:px-16 md:pb-4 ld:px-16 ld:pb-4 pb-2 px-6"
           >
             Favorites
-          </a>
+          </p>
         </NavLink>
       </div>
     </>

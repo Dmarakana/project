@@ -199,8 +199,9 @@ export default function Other() {
       </div>
 
       <div className="justify-center  md:mx-52 lg:ml-52 lg:mr-52 grid grid-cols-2 lg:grid-cols-4  mx-4 ld:gap-x-96  gap-x-4 ">
-        {Recipe.filter((item) => item.Star === 5)
-          .slice(0, sl)
+        {Recipe
+          // .filter((item) => item.Star === 5)
+          //   .slice(0, sl)
           .map((item, index) => (
             <Link to={`/Recipe/${item.Id}`} key={index}>
               <div className="max-w-xs mx-auto overflow-hidden shadow-lg rounded-lg md:mt-10 ld:mt-10 mt-4 ">
@@ -216,7 +217,7 @@ export default function Other() {
                     {renderStars(item.Star)}
                   </div>
                   <h2 className="text-gray-800 text-lg font-semibold px-1">
-                    {item.Name}
+                    {item.Id}&nbsp;{item.Name}
                   </h2>
                 </div>
               </div>

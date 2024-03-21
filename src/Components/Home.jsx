@@ -4,8 +4,6 @@ import Footer from "./Footer";
 import Other from "./Other";
 
 export default function Home() {
-  console.log("njksjkfdkKJFGHJ");
-
   return (
     <>
       <Navbar />

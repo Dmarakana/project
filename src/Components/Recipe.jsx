@@ -194,7 +194,7 @@ export default function Recipe() {
 
                 <div className="text-lg md:mt-2 lg:mt-2 md:mx-16 bg-slate-200 rounded-xl mx-7">
                   <div className="md:mx-4 ld:mx-4 mx-5">
-                    {Item.NutritioFacts.map((tdata, index) => (
+                    {Item.NutritionFacts.map((tdata, index) => (
                       <div key={index}>
                         {tdata.Data1.map((item, index2) => (
                           <div
