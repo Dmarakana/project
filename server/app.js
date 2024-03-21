@@ -12432,6 +12432,12 @@ const recipe = [
       "Salt to taste",
       "Fresh cilantro for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Boil the diced potatoes until they are just tender. Drain and set aside.",
       "In a large pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
@@ -12467,6 +12473,12 @@ const recipe = [
       "Salt to taste",
       "Fresh cilantro for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Parboil the potato cubes and cauliflower florets for 5 minutes. Drain and set aside.",
       "In a large pan, heat vegetable oil and add cumin seeds and mustard seeds. Allow them to splutter.",
@@ -12498,6 +12510,12 @@ const recipe = [
       "Salt to taste",
       "Fresh lemon wedges for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Parboil the diced potatoes for 5 minutes. Drain and set aside.",
       "In a pan, heat vegetable oil and add cumin seeds and mustard seeds. Allow them to splutter.",
@@ -12528,6 +12546,12 @@ const recipe = [
       "1 teaspoon red chili powder",
       "Salt to taste",
       "Fresh coriander for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Prick the parboiled potatoes with a fork. In a pan, heat oil and lightly fry the potatoes until golden brown. Set aside.",
@@ -12561,6 +12585,12 @@ const recipe = [
       "1 teaspoon garam masala",
       "Salt to taste",
       "Fresh ginger for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Boil the peeled and cubed potatoes until they are just tender. Drain and set aside.",
@@ -12598,6 +12628,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Roast the eggplant over an open flame until the skin is charred and the flesh is soft. Allow it to cool, then peel and mash the roasted eggplant.",
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
@@ -12626,6 +12662,12 @@ const recipe = [
       "1 teaspoon coriander powder",
       "Salt to taste",
       "Fresh coriander for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat ghee or vegetable oil. Add cumin seeds and let them splutter.",
@@ -12657,6 +12699,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Fresh cilantro for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
@@ -12692,6 +12740,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
       "Add finely chopped onions and sauté until golden brown.",
@@ -12725,6 +12779,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Fresh coriander for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Boil the peeled and cubed potatoes until they are just tender. Drain and set aside.",
@@ -12760,6 +12820,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
       "Add finely chopped onions and sauté until golden brown.",
@@ -12793,6 +12859,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Fresh coriander for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
@@ -12828,6 +12900,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
       "Add finely chopped onions and sauté until golden brown.",
@@ -12858,6 +12936,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed potatoes, chopped fenugreek leaves, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt. Knead into a smooth dough, adding water as needed.",
@@ -12892,6 +12976,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
       "Add finely chopped onions and sauté until golden brown.",
@@ -12922,6 +13012,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed potatoes, chopped fenugreek leaves, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt. Knead into a smooth dough, adding water as needed.",
@@ -12954,6 +13050,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Fresh coriander for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
@@ -12988,6 +13090,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
       "Add finely chopped onions and sauté until golden brown.",
@@ -13021,6 +13129,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
       "Add finely chopped onions and sauté until golden brown.",
@@ -13053,6 +13167,12 @@ const recipe = [
       "Salt to taste",
       "Oil for frying",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine mashed potatoes, chopped fenugreek leaves, bread crumbs, besan, ginger-garlic paste, cumin powder, garam masala, red chili powder, and salt. Mix well to form a dough-like consistency.",
       "Divide the mixture into equal portions and shape them into round cutlets or patties.",
@@ -13082,6 +13202,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed potatoes, chopped spinach, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt. Knead into a smooth dough, adding water as needed.",
@@ -13115,6 +13241,12 @@ const recipe = [
       "Salt to taste",
       "Oil for frying",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine mashed potatoes, chopped fenugreek leaves, bread crumbs, besan, ginger-garlic paste, cumin powder, garam masala, red chili powder, and salt. Mix well to form a dough-like consistency.",
       "Divide the mixture into equal portions and shape them into round tikkis or patties.",
@@ -13146,6 +13278,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Fresh coriander for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat ghee or vegetable oil and add cumin seeds. Allow them to splutter.",
@@ -13181,6 +13319,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
       "Add finely chopped onions and sauté until golden brown.",
@@ -13212,6 +13356,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed potatoes, grated cauliflower, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt. Knead into a smooth dough, adding water as needed.",
@@ -13245,6 +13395,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Fresh coriander for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
@@ -13280,6 +13436,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pressure cooker, combine washed lentils, cubed potatoes, chopped spinach, chopped onions, chopped tomatoes, ginger-garlic paste, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add enough water to cover the ingredients and cook until the lentils and potatoes are tender.",
@@ -13309,6 +13471,12 @@ const recipe = [
       "Salt to taste",
       "Ghee for cooking",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed potatoes, chopped fenugreek leaves, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt. Knead into a smooth dough, adding water as needed.",
       "Divide the dough into equal portions and roll each portion into a ball.",
@@ -13336,6 +13504,12 @@ const recipe = [
       "1/2 teaspoon turmeric powder",
       "Salt to taste",
       "Fresh coriander for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat ghee or vegetable oil and add cumin seeds. Allow them to splutter.",
@@ -13371,6 +13545,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat vegetable oil and add cumin seeds. Allow them to splutter.",
       "Add finely chopped onions and sauté until golden brown.",
@@ -13399,6 +13579,12 @@ const recipe = [
       "Water, as needed",
       "Salt to taste",
       "Ghee for brushing",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, bajra flour, jowar flour, ragi flour, and a pinch of salt.",
@@ -13430,6 +13616,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped fenugreek leaves, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Gradually add water and knead the mixture into a smooth and soft dough.",
@@ -13458,6 +13650,12 @@ const recipe = [
       "Salt to taste",
       "Water, as needed",
       "Ghee for brushing",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine besan, whole wheat flour, ajwain, turmeric powder, red chili powder, and salt.",
@@ -13489,6 +13687,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped spinach leaves, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Gradually add water and knead the mixture into a smooth and soft dough.",
@@ -13518,6 +13722,12 @@ const recipe = [
       "Salt to taste",
       "Water, as needed",
       "Ghee for brushing",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, finely chopped onions, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -13549,6 +13759,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, minced garlic, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Gradually add water and knead the mixture into a smooth and soft dough.",
@@ -13578,6 +13794,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped fenugreek leaves, gram flour, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -13609,6 +13831,12 @@ const recipe = [
       "Fresh coriander leaves, chopped",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, crumbled paneer, chopped onion, chopped green chili, ginger-garlic paste, garam masala, cumin powder, chopped coriander leaves, and salt.",
@@ -13642,6 +13870,12 @@ const recipe = [
       "Salt to taste",
       "Ghee for cooking",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, shredded cabbage, chopped onion, chopped green chili, carom seeds, turmeric powder, red chili powder, cumin powder, and salt.",
       "Add water gradually and knead the mixture into a soft dough.",
@@ -13673,6 +13907,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed sweet potatoes, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -13702,6 +13942,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped spinach leaves, crumbled paneer, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -13734,6 +13980,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, grated carrots, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -13765,6 +14017,12 @@ const recipe = [
       "Salt to taste",
       "Ghee for cooking",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed avocado, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a soft dough.",
@@ -13795,6 +14053,12 @@ const recipe = [
       "Salt to taste",
       "Water, as needed",
       "Ghee for brushing",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, finely chopped broccoli, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -13828,6 +14092,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, bajra flour, jowar flour, ground flaxseeds, sesame seeds, cumin seeds, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -13858,6 +14128,12 @@ const recipe = [
       "Fresh coriander leaves, chopped",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped mushrooms, chopped onion, chopped green chili, ginger-garlic paste, garam masala, cumin powder, chopped coriander leaves, and salt.",
@@ -13891,6 +14167,12 @@ const recipe = [
       "Salt to taste",
       "Ghee for cooking",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, grated beetroot, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a soft dough.",
@@ -13922,6 +14204,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped mint leaves, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -13952,6 +14240,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped tomatoes, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -13986,6 +14280,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped capsicum, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -14016,6 +14316,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, grated radish, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -14048,6 +14354,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, sweet corn kernels, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -14078,6 +14390,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, grated cauliflower, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -14110,6 +14428,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped spinach leaves, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -14140,6 +14464,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed sweet potatoes, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -14172,6 +14502,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped fenugreek leaves, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -14201,6 +14537,12 @@ const recipe = [
       "Fresh coriander leaves, chopped",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, chopped onion, chopped green chili, ginger-garlic paste, garam masala, cumin powder, chopped coriander leaves, and salt.",
@@ -14233,6 +14575,12 @@ const recipe = [
       "Water, as needed",
       "Ghee for brushing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed sweet potato, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
       "Add water gradually and knead the mixture into a smooth and soft dough.",
@@ -14263,6 +14611,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, mashed avocado, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -14296,6 +14650,12 @@ const recipe = [
       "Salt to taste",
       "Water, as needed",
       "Ghee for brushing",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, shredded cabbage, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -14331,6 +14691,12 @@ const recipe = [
       "Fresh coriander leaves for garnish",
       "2 tablespoons ghee or oil",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Rinse and soak chana dal in water for 30 minutes. Drain the water.",
       "In a pressure cooker, heat ghee or oil. Add cumin seeds and let them splutter.",
@@ -14363,6 +14729,12 @@ const recipe = [
       "Fresh coriander leaves for garnish",
       "2 tablespoons oil",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat oil and add cumin seeds. Let them splutter.",
       "Add chopped onions and sauté until golden brown. Add green chili and tomatoes, cook until tomatoes are soft.",
@@ -14389,6 +14761,12 @@ const recipe = [
       "Salt to taste",
       "Fresh mint leaves for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine grated lauki, beaten yogurt, cumin powder, chaat masala, and salt. Mix well.",
       "Refrigerate the Lauki Raita for at least 1 hour to allow the flavors to meld.",
@@ -14413,6 +14791,12 @@ const recipe = [
       "1/4 cup chopped nuts (almonds, cashews, pistachios)",
       "1/2 teaspoon cardamom powder",
       "Saffron strands soaked in milk for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a heavy-bottomed pan, boil milk and add soaked basmati rice. Simmer on low heat, stirring occasionally until the rice is cooked and the mixture thickens.",
@@ -14443,6 +14827,12 @@ const recipe = [
       "1/2 teaspoon red chili powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, grated lauki, chopped onion, chopped green chili, cumin seeds, coriander powder, turmeric powder, red chili powder, and salt.",
@@ -14481,6 +14871,12 @@ const recipe = [
       "A pinch of asafoetida (hing)",
       "Fresh coriander leaves for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine grated lauki, besan, wheat flour, ginger-green chili paste, fennel seeds, turmeric powder, red chili powder, coriander powder, baking soda, and salt.",
       "Knead the mixture into a soft dough and shape it into cylindrical rolls (muthias).",
@@ -14511,6 +14907,12 @@ const recipe = [
       "1 tablespoon tamarind pulp",
       "Salt to taste",
       "1 tablespoon oil",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat oil and add mustard seeds. Once they splutter, add cumin seeds and asafoetida.",
@@ -14543,6 +14945,12 @@ const recipe = [
       "Fresh coriander leaves for garnish",
       "1 tablespoon oil",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat oil and add cumin seeds. Once they splutter, add chopped onions and sauté until golden brown.",
       "Add chopped green chilies and tomatoes. Cook until the tomatoes are soft and the mixture forms a thick base.",
@@ -14571,6 +14979,12 @@ const recipe = [
       "1/2 teaspoon roasted cumin powder",
       "Salt to taste",
       "Fresh mint leaves for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine grated lauki, chopped cucumber, chopped tomatoes, chopped red onion, and fresh coriander leaves.",
@@ -14601,6 +15015,12 @@ const recipe = [
       "Salt to taste",
       "Oil for deep frying",
       "Fresh coriander leaves for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine grated lauki, besan, chopped onion, chopped green chilies, cumin seeds, turmeric powder, red chili powder, garam masala, and salt.",
@@ -14641,6 +15061,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander leaves for garnish",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine grated lauki, besan, chopped onion, chopped green chilies, ginger-garlic paste, cumin powder, coriander powder, and salt. Shape the mixture into small koftas (dumplings).",
       "Deep fry the koftas until golden brown. Set aside.",
@@ -14668,6 +15094,12 @@ const recipe = [
       "1/4 teaspoon black pepper",
       "A pinch of roasted cumin seeds for garnish",
       "Fresh coriander leaves for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a bowl, whisk the yogurt until smooth.",
@@ -14698,6 +15130,12 @@ const recipe = [
       "1/2 teaspoon coriander powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, grated lauki, yogurt, oil, cumin seeds, turmeric powder, red chili powder, coriander powder, and salt.",
@@ -14731,6 +15169,12 @@ const recipe = [
       "Fresh coriander leaves for garnish",
       "2 tablespoons ghee or oil",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Rinse and soak moong dal in water for 30 minutes. Drain the water.",
       "In a pressure cooker, heat ghee or oil. Add cumin seeds and let them splutter.",
@@ -14759,6 +15203,12 @@ const recipe = [
       "1/2 teaspoon cumin powder",
       "Salt to taste",
       "Ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, grated lauki, carom seeds, turmeric powder, red chili powder, cumin powder, and salt.",
@@ -14793,6 +15243,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander leaves for garnish",
       "2 tablespoons ghee or oil",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat ghee or oil. Add chopped onions and sauté until golden brown.",
@@ -14837,6 +15293,12 @@ const recipe = [
       "Ghee for cooking",
       "Salt to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Prepare koftas by combining grated lauki, besan, chopped onion, chopped green chilies, ginger-garlic paste, cumin powder, coriander powder, and salt. Shape into small koftas and deep fry until golden brown. Set aside.",
       "In a pan, heat ghee and sauté thinly sliced onions until golden brown. Add chopped tomatoes, biryani masala, turmeric powder, red chili powder, and salt. Cook until tomatoes are soft.",
@@ -14866,6 +15328,12 @@ const recipe = [
       "1/2 teaspoon roasted cumin powder",
       "1/2 teaspoon red chili powder",
       "Salt to taste",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a large mixing bowl, combine grated lauki, boiled chana, chopped onion, chopped tomato, chopped cucumber, and fresh coriander leaves.",
@@ -14910,6 +15378,12 @@ const recipe = [
       "A pinch of saffron strands soaked in warm milk",
       "Ghee for cooking",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine grated lauki, besan, chopped onion, chopped green chilies, ginger-garlic paste, cumin powder, coriander powder, and salt. Shape the mixture into small koftas (dumplings).",
       "Deep fry the koftas until golden brown. Set aside.",
@@ -14943,6 +15417,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander leaves for garnish",
       "2 tablespoons ghee or oil",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Rinse and soak moong dal in water for 30 minutes. Drain the water.",
@@ -14978,6 +15458,12 @@ const recipe = [
       "Fresh coriander leaves for garnish",
       "1 tablespoon ghee or oil",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pot, heat ghee or oil. Add cumin seeds and let them splutter.",
       "Add chopped onions and sauté until golden brown. Add ginger-garlic paste and cook until fragrant.",
@@ -15010,6 +15496,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander leaves for garnish",
       "2 tablespoons oil",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat oil. Add cumin seeds and mustard seeds. Let them splutter.",
@@ -15053,6 +15545,12 @@ const recipe = [
       "Fresh coriander leaves for garnish",
       "2 tablespoons ghee or oil",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a mixing bowl, combine grated lauki, besan, cumin powder, coriander powder, turmeric powder, red chili powder, and salt. Shape the mixture into small koftas (dumplings).",
       "Deep fry the koftas until golden brown. Set aside.",
@@ -15085,6 +15583,12 @@ const recipe = [
       "1/2 teaspoon cumin powder",
       "Salt to taste",
       "Oil or ghee for cooking",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a mixing bowl, combine whole wheat flour, grated lauki, chopped fresh fenugreek leaves, yogurt, ginger-green chili paste, turmeric powder, red chili powder, cumin powder, and salt.",
@@ -15122,6 +15626,12 @@ const recipe = [
       "2 tablespoons ghee or oil",
       "Salt to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pressure cooker, combine toor dal, diced lauki, chopped onion, tomatoes, green chili, ginger-garlic paste, turmeric powder, red chili powder, coriander powder, asafoetida, curry leaves, and salt.",
       "Add 3 cups of water, close the lid, and pressure cook for 3-4 whistles or until the dal is cooked and lauki is tender.",
@@ -15154,6 +15664,12 @@ const recipe = [
       "Salt to taste",
       "Fresh coriander leaves for garnish",
       "2 tablespoons oil",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a pan, heat oil. Add cumin seeds and mustard seeds. Let them splutter.",
@@ -15189,6 +15705,12 @@ const recipe = [
       "2 tablespoons oil",
       "Salt to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat oil. Add cumin seeds and let them splutter.",
       "Add chopped onions and sauté until golden brown. Add ginger-garlic paste and cook until fragrant.",
@@ -15217,6 +15739,12 @@ const recipe = [
       "A pinch of saffron strands soaked in warm milk",
       "Assorted nuts for garnish (almonds, cashews, pistachios)",
       "1 tablespoon ghee",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a heavy-bottomed pan, heat ghee. Add grated lauki and sauté until it turns golden brown and most of the moisture evaporates.",
@@ -15252,6 +15780,12 @@ const recipe = [
       "2 tablespoons oil",
       "Salt to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a pan, heat oil. Add cumin seeds and let them splutter.",
       "Add chopped onions and sauté until golden brown. Add ginger-garlic paste and cook until fragrant.",
@@ -15278,6 +15812,12 @@ const recipe = [
       "1/4 teaspoon black pepper",
       "A pinch of roasted cumin seeds for garnish",
       "Fresh mint leaves for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a bowl, combine grated lauki, whisked yogurt, cumin powder, black salt, and black pepper. Mix well.",
