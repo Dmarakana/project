@@ -28283,6 +28283,12 @@ const recipe = [
       "2 tablespoons chopped fresh parsley",
       "Salt and pepper to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Lay the tortillas flat on a clean surface.",
       "Spread hummus evenly over the tortillas.",
@@ -28312,6 +28318,12 @@ const recipe = [
       "1/2 cup grated Parmesan cheese",
       "1/2 cup Caesar dressing",
       "1/4 cup croutons (optional)",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Preheat grill to medium-high heat.",
@@ -28350,6 +28362,12 @@ const recipe = [
       "1/4 cup ranch dressing",
       "Salt and pepper to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Preheat oven to 400°F (200°C).",
       "In a bowl, toss chickpeas with olive oil, salt, and pepper.",
@@ -28382,6 +28400,12 @@ const recipe = [
       "1 cup shredded lettuce",
       "1 large tomato, thinly sliced",
       "Salt and pepper to taste",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Lay the tortillas flat on a clean surface.",
@@ -28419,6 +28443,12 @@ const recipe = [
       "1/4 cup chopped green onions",
       "1/4 cup chopped peanuts",
       "Lime wedges, for serving",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Preheat oven to 400°F (200°C).",
@@ -28458,6 +28488,12 @@ const recipe = [
       "1/4 cup chopped fresh parsley",
       "1/2 cup tzatziki sauce",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Preheat grill to medium-high heat.",
       "Brush chicken breasts with olive oil and season with salt and pepper.",
@@ -28490,6 +28526,12 @@ const recipe = [
       "2 cups coleslaw mix (shredded cabbage and carrots)",
       "1/4 cup chopped fresh cilantro",
       "Salt and pepper to taste",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Preheat oven to 400°F (200°C).",
@@ -28526,6 +28568,12 @@ const recipe = [
       "1/4 cup fresh basil leaves",
       "2 tablespoons balsamic glaze",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Lay the tortillas flat on a clean surface.",
       "Spread basil pesto evenly over the tortillas.",
@@ -28557,6 +28605,12 @@ const recipe = [
       "1/4 cup chipotle sauce or creamy chipotle dressing",
       "Salt and pepper to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a bowl, mash half of the black beans with a fork or potato masher until creamy.",
       "Lay the tortillas flat on a clean surface.",
@@ -28587,6 +28641,12 @@ const recipe = [
       "1/4 cup diced red onion",
       "2 tablespoons chopped fresh cilantro",
       "Salt and pepper to taste",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Preheat grill to medium-high heat.",
@@ -28620,6 +28680,12 @@ const recipe = [
       "1 large tomato, thinly sliced",
       "Salt and pepper to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Lay the tortillas flat on a clean surface.",
       "Spread mashed avocado evenly over the tortillas.",
@@ -28651,6 +28717,12 @@ const recipe = [
       "2 tablespoons chopped fresh parsley",
       "2 tablespoons balsamic vinaigrette",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Lay the tortillas flat on a clean surface.",
       "Spread hummus evenly over the tortillas.",
@@ -28681,6 +28753,13 @@ const recipe = [
       "1/4 cup diced red onion",
       "Salt and pepper to taste",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
+
     Instructions: [
       "Lay the tortillas flat on a clean surface.",
       "Spread tzatziki sauce evenly over the tortillas.",
@@ -28710,6 +28789,12 @@ const recipe = [
       "2 tablespoons chopped fresh parsley",
       "2 tablespoons pickled onions (optional)",
       "Salt and pepper to taste",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Lay the tortillas flat on a clean surface.",
@@ -28742,6 +28827,12 @@ const recipe = [
       "1/4 cup chopped fresh cilantro",
       "2 tablespoons lime juice",
       "2 tablespoons honey",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Preheat grill to medium-high heat.",
@@ -28783,6 +28874,12 @@ const recipe = [
       "1/4 cup chopped peanuts",
       "Lime wedges, for serving",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Cut pressed tofu into small cubes.",
       "In a bowl, whisk together soy sauce, rice vinegar, sesame oil, honey or maple syrup, minced garlic, grated ginger, and red pepper flakes (if using).",
@@ -28816,6 +28913,12 @@ const recipe = [
       "2 leaves green leaf lettuce",
       "1 large tomato, thinly sliced",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a bowl, mix together drained tuna, mayonnaise, Dijon mustard, lemon juice, salt, and pepper.",
       "Lay the tortillas flat on a clean surface.",
@@ -28845,6 +28948,12 @@ const recipe = [
       "2 large whole wheat tortillas",
       "2 leaves green leaf lettuce",
       "1 large tomato, thinly sliced",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Place eggs in a saucepan and cover with cold water.",
@@ -28885,6 +28994,12 @@ const recipe = [
       "2 cups shredded lettuce",
       "1 large tomato, thinly sliced",
       "1/4 cup tahini sauce",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "In a food processor, combine chickpeas, chopped fresh parsley, chopped fresh cilantro, minced garlic, ground cumin, ground coriander, cayenne pepper, salt, and pepper.",
@@ -28930,6 +29045,12 @@ const recipe = [
       "1/4 cup chopped peanuts",
       "Lime wedges, for serving",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Slice chicken breasts into thin strips.",
       "In a bowl, whisk together soy sauce, lime juice, minced garlic, grated ginger, and red pepper flakes.",
@@ -28963,6 +29084,12 @@ const recipe = [
       "1/4 cup salsa",
       "2 tablespoons olive oil",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Sprinkle shredded Monterey Jack cheese evenly over two tortillas.",
       "Top with black beans, corn, chopped fresh cilantro, and salsa.",
@@ -28991,6 +29118,12 @@ const recipe = [
       "1/2 cup sliced cucumber",
       "1/2 cup diced tomatoes",
       "1/2 cup sliced bell peppers (any color)",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Lay the tortillas flat on a clean surface.",
@@ -29025,6 +29158,12 @@ const recipe = [
       "1/4 cup chopped fresh cilantro",
       "1/4 cup ranch dressing or creamy avocado dressing",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Preheat oven to 400°F (200°C).",
       "Pat chickpeas dry with a paper towel and place them on a baking sheet.",
@@ -29058,6 +29197,12 @@ const recipe = [
       "1 large tomato, thinly sliced",
       "1/4 cup fresh basil leaves",
       "2 tablespoons balsamic glaze",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Preheat grill to medium-high heat.",
@@ -29097,6 +29242,12 @@ const recipe = [
       "Wasabi, for serving",
       "Soy sauce, for serving",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Rinse sushi rice under cold water until the water runs clear.",
       "In a rice cooker or saucepan, combine sushi rice and water.",
@@ -29133,6 +29284,12 @@ const recipe = [
       "1/4 cup thinly sliced red onion",
       "1/4 cup crumbled feta cheese",
       "Fresh dill, for garnish",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Preheat grill to medium-high heat.",
@@ -29172,6 +29329,12 @@ const recipe = [
       "1/4 cup shredded Monterey Jack cheese",
       "2 tablespoons chopped fresh cilantro",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Preheat grill to medium-high heat.",
       "Brush chicken breasts with olive oil and season with salt, pepper, chili powder, and ground cumin.",
@@ -29207,6 +29370,12 @@ const recipe = [
       "Salt and pepper to taste",
       "Vegetable oil for frying",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "Season chicken tenders with salt and pepper.",
       "Dredge chicken tenders in all-purpose flour, shaking off any excess.",
@@ -29241,6 +29410,12 @@ const recipe = [
       "2 tablespoons Dijon mustard",
       "2 cups shredded lettuce",
     ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
+    ],
     Instructions: [
       "In a skillet, melt butter over medium heat.",
       "Add sliced mushrooms to the skillet and sauté until they are tender and golden brown.",
@@ -29272,6 +29447,12 @@ const recipe = [
       "2 cups shredded lettuce",
       "1 large tomato, thinly sliced",
       "1/4 cup ranch dressing",
+    ],
+    NutritionFacts: [
+      {
+        Data1: [],
+        Data2: [],
+      },
     ],
     Instructions: [
       "Lay tortillas flat on a clean surface.",
