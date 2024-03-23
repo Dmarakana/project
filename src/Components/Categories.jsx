@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
+
 export default function Categories() {
   const [width, setWidth] = useState(950); // Initial width
   const [height, setHeight] = useState("auto"); // Initial height set to auto
@@ -71,6 +73,7 @@ export default function Categories() {
     setsl((sl) => sl + 6);
     console.log(sl);
   };
+
   return (
     <>
       <Navbar />
@@ -82,19 +85,21 @@ export default function Categories() {
 
       <div className=" md:my-10 lg:my-10 my-4 md:mx-48 lg:mx-40 ">
         {Categories.slice(0, sl).map((data, index) => (
-          <div key={index} className="inline-block  md:mx-4 lg:mx-7 mx-3 mb-10">
-            <div className="rounded-full overflow-hidden">
-              <img
-                className="md:w-44 lg:w-44 md:h-44 lg:h-44 w-24 h-24 object-cover"
-                src={data.src}
-                alt={`${index + 1}`}
-                onLoad={handleImageLoad}
-              />
+          <Link to={`/Recipes/${data.catagories}`} key={index}>
+            <div className="inline-block  md:mx-4 lg:mx-7 mx-3 mb-10">
+              <div className="rounded-full overflow-hidden">
+                <img
+                  className="md:w-44 lg:w-44 md:h-44 lg:h-44 w-24 h-24 object-cover"
+                  src={data.src}
+                  alt={`${index + 1}`}
+                  onLoad={handleImageLoad}
+                />
+              </div>
+              <p className="text-center font-bold md:text-2xl ld:text-2xl md:mt-3 ld:mt-3 mt-1">
+                {data.catagories}
+              </p>
             </div>
-            <p className="text-center font-bold md:text-2xl ld:text-2xl md:mt-3 ld:mt-3 mt-1">
-              {data.catagories}
-            </p>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="flex justify-center my-16">

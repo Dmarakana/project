@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Recipe() {
   const [isSaved, setIsSaved] = useState(false);
@@ -9,6 +10,11 @@ export default function Recipe() {
   const handleClick = () => {
     setIsSaved(!isSaved);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when component mounts
+  }, []);
+
   const params = useParams();
 
   const data = [
@@ -111,17 +117,22 @@ export default function Recipe() {
     fetch("http://localhost:3000/api/recipe")
       .then((response) => response.json())
       .then((data) => {
-        const New = data.filter((recipe) => recipe.Id == params.id);
+        const New = data;
         setRecipe(New);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  const [ld, setld] = useState(12);
+  const ldincrement = () => {
+    setld((ld) => ld + 6);
+  };
+
   return (
     <>
       <Navbar />
       <div className="  md:mx-52 ld:mx-52 mx-2 mt-10">
-        {Recipe.map((Item) => (
+        {Recipe.filter((recipe) => recipe.Id == params.id).map((Item) => (
           <div key={Item.Id}>
             <div className="flex items-center justify-between">
               <label className="ld:text-4xl md:text-4xl sm:text-2xl text-xl font-bold mx-5">
@@ -242,24 +253,39 @@ export default function Recipe() {
         </div>
 
         <div className="flex flex-wrap justify-center mx-5 gap-2">
-          {img.map((item, index) => (
-            <div
+          {Recipe.slice(0, ld).map((item, index) => (
+            <Link
+              to={`/Recipe/${item.Id}`}
               key={index}
-              className="max-w-xs mx-auto overflow-hidden  rounded-lg md:mt-10 ld:mt-10 mt-4 "
+              onClick={window.scrollTo(0, 0)}
             >
-              <img
-                className="w-full"
-                src={item.src}
-                alt={item.text}
-                style={{ width: "200px", height: "200px" }}
-              />
-              <div className="p-1">
-                <h2 className="text-gray-800 text-lg font-semibold">
-                  {item.text}
-                </h2>
+              <div className="max-w-xs mx-auto overflow-hidden  rounded-lg md:mt-10 ld:mt-10 mt-4 ">
+                <img
+                  className="w-full"
+                  src={item.Src}
+                  alt={item.Id}
+                  style={{ width: "200px", height: "200px" }}
+                />
+                <div className="p-1">
+                  <h2 className="text-gray-800 text-lg font-semibold">
+                    {item.Name.length > 20
+                      ? item.Name.substring(0, 20) + "...."
+                      : item.Name}
+                  </h2>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
+        </div>
+
+        <div className="flex justify-center my-16">
+          <button
+            className="border-solid border-2 border-gray-950 text-sb  px-6 py-2"
+            onClick={ldincrement}
+            type="button"
+          >
+            Load More
+          </button>
         </div>
       </div>
 

@@ -40,6 +40,15 @@ const SlideShow = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  const [Recipe, setRecipe] = useState([]);
+  useEffect(() => {
+    // Fetch recipes from the API when the component mounts
+    fetch("http://localhost:3000/api/recipe")
+      .then((response) => response.json())
+      .then((data) => setRecipe(data))
+      .catch((error) => console.error("Error fetching users:", error));
+  }, []);
+
   return (
     <>
       <div className=" container mx-auto md:mt-5 ld:mt-5 mt-3  ">

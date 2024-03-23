@@ -8,6 +8,7 @@ import Categories from "./Components/Categories";
 import Profile from "./Components/Profile";
 import Sendotp from "./Components/Sendotp";
 import Otp from "./Components/Otp";
+import CategoriesRecipe from "./Components/CategoriesRecipe";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/Register" element={<Sign />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/Recipe/" element={<Recipe />} />
+          <Route path="/Recipe" element={<Recipe />} />
           <Route path="/Recipe/:id" element={<Recipe />} />
+          <Route path="/Recipes/:catagory" element={<CategoriesRecipe />} />
           <Route path="/Categories" element={<Categories />} />
           <Route path="/Favorites" element={<Favorites />} />
           <Route path="/Profile" element={<Profile />} />

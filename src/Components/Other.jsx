@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Recipe from "./Recipe";
+import axios from "axios";
 export default function Other() {
   const [width, setWidth] = useState(950); // Initial width
   const [height, setHeight] = useState("auto"); // Initial height set to auto
@@ -145,7 +146,12 @@ export default function Other() {
   const [sl, setsl] = useState(12);
   const incrementCount = () => {
     setsl((sl) => sl + 4);
-    console.log(sl);
+  };
+
+  //increment latest recipe length
+  const [ld, setld] = useState(14);
+  const ldincrement = () => {
+    setld((ld) => ld + 7);
   };
 
   const [Categories, setCategories] = useState([]);
@@ -200,8 +206,8 @@ export default function Other() {
 
       <div className="justify-center  md:mx-52 lg:ml-52 lg:mr-52 grid grid-cols-2 lg:grid-cols-4  mx-4 ld:gap-x-96  gap-x-4 ">
         {Recipe.filter((item) => item.Star === 5)
-          .sort(() => Math.random() - 0.5)
           .slice(0, sl)
+          .sort(() => Math.random() - 0.5)
           .map((item, index) => (
             <Link to={`/Recipe/${item.Id}`} key={index}>
               <div className="max-w-xs mx-auto overflow-hidden shadow-lg rounded-lg md:mt-10 ld:mt-10 mt-4 ">
@@ -276,29 +282,33 @@ export default function Other() {
         </label>
       </div>
       <div className="flex flex-wrap justify-center md:mx-52 ld:mx-48 gap-2">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className="max-w-xs mx-auto overflow-hidden  rounded-lg md:mt-10 ld:mt-10 mt-4 "
-          >
-            <img
-              className="w-full"
-              src={item.imageUrl}
-              alt={item.title}
-              style={{ width: "200px", height: "200px" }}
-            />
-            <div className="p-1">
-              <h2 className="text-gray-800 text-lg font-semibold">
-                {item.title}
-              </h2>
-            </div>
-          </div>
-        ))}
+        {Recipe.sort(() => Math.random() - 0.5)
+          .slice(0, ld)
+          .map((item, index) => (
+            <Link to={`/Recipe/${item.Id}`} key={index}>
+              <div className="max-w-xs mx-auto overflow-hidden  rounded-lg md:mt-10 ld:mt-10 mt-4 ">
+                <img
+                  className="w-full"
+                  src={item.Src}
+                  alt={item.Id}
+                  style={{ width: "200px", height: "200px" }}
+                />
+                <div className="p-1">
+                  <h2 className="text-gray-800 text-lg font-semibold">
+                    {item.Name.length > 20
+                      ? item.Name.substring(0, 20) + "..."
+                      : item.Name}
+                  </h2>
+                </div>
+              </div>
+            </Link>
+          ))}
       </div>
 
       <div className="flex justify-center my-16">
         <button
           className="border-solid border-2 border-gray-950 text-sb  px-6 py-2"
+          onClick={ldincrement}
           type="button"
         >
           Load More
