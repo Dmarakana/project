@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import heic2any from "heic2any";
 
 export default function Profile() {
   const [id, setid] = useState("");
