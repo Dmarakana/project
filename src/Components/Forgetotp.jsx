@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const EmailVerification = () => {
+const Forgetotp = () => {
   const inputRefs = [
     useRef(null),
     useRef(null),
@@ -63,15 +63,20 @@ const EmailVerification = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3000/check", {
-        email: location.state.email,
-        username: location.state.username,
-        password: location.state.password,
-        otp: otp,
-      });
+      const response = await axios.post(
+        "http://localhost:3000/checkforgototp",
+        {
+          email: location.state.email,
+          otp: otp,
+        }
+      );
       if (response.data == true) {
         setTimeout(() => {
-          navigate("/");
+          navigate("/Newpassword", {
+            state: {
+              email: location.state.email,
+            },
+          });
         }, 1000);
       }
     } catch (error) {
@@ -156,4 +161,4 @@ const EmailVerification = () => {
   );
 };
 
-export default EmailVerification;
+export default Forgetotp;

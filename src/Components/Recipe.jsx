@@ -3,112 +3,64 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Recipe() {
+  const params = useParams();
   const [isSaved, setIsSaved] = useState(false);
+
+  const [id, setid] = useState("");
+
+  // window.location.reload();
 
   const handleClick = () => {
     setIsSaved(!isSaved);
+
+    if (!isSaved === true) {
+      //save code
+      const save = async () => {
+        try {
+          await axios.post("http://localhost:3000/save", {
+            id: id,
+            stor: parseInt(params.id, 10),
+          });
+        } catch (error) {
+          console.error("Error sending OTP email:", error);
+          alert("Failed to send OTP. Please try again later.");
+        }
+      };
+      save();
+
+      console.log("save");
+    } else {
+      const remove = async () => {
+        try {
+          axios.post("http://localhost:3000/remove", {
+            stor: [parseInt(params.id, 10)],
+          });
+          console.log("delete");
+        } catch (error) {
+          console.error("Error : ", error);
+          alert("Something went wrong.");
+        }
+      };
+      remove();
+      console.log("unseved");
+    }
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top when component mounts
+    // Fetch categories from the API when the component mounts
+    fetch("http://localhost:3000/userid")
+      .then((response) => response.json())
+      .then((data) => setid(data))
+      .catch((error) => console.error("Error fetching users:", error));
   }, []);
 
-  const params = useParams();
-
-  const data = [
-    {
-      data1: "Calories",
-      data2: "219.9",
-    },
-    {
-      data1: "Total Fat",
-      data2: "10.7 g",
-    },
-    {
-      data1: "Saturated Fat",
-      data2: "2.2 g",
-    },
-    {
-      data1: " Cholesterol",
-      data2: "37.4 mg",
-    },
-    {
-      data1: "Sodium",
-      data2: "120.3 mg",
-    },
-    {
-      data1: "Potassium",
-      data2: "32.8 mg",
-    },
-    {
-      data1: "Total Carbohydrate",
-      data2: "22.3 mg",
-    },
-    {
-      data1: "Sugars",
-      data2: "8.4 g",
-    },
-    {
-      data1: "Protein",
-      data2: "7.9 g",
-    },
-  ];
-
-  const Instructions = [
-    "To prepare crust add graham crackers to a food processor and process until you reach fine crumbs. Add melted butter and pulse 3-4 times to coat crumbs with butter.",
-    "Pour mixture into a 20cm tart tin Use the back of a spoon to firmly press the mixture out across the bottom and sides of the tart tin. Chill for 30 min.",
-    "Begin by adding the marshmallows and melted butter into a microwave safe bowl. Microwave for 30 seconds and mix to combine. Set aside.",
-    "Next, add the gelatine and water to a small mixing bowl and mix to combine. Microwave for 30 seconds.",
-    "Add the cream cheese to the marshmallow mixture and use a hand mixer or stand mixer fitted with a paddle attachment to mix until smooth.",
-    "Add the warm cream and melted gelatin mixture and mix until well combined.",
-    "Add 1/3 of the mixture to a mixing bowl, add purple food gel and mix until well combined. Colour 1/3 of the mixture blue. Split the remaining mixture into two mixing bowls, colour one pink and leave the other white.",
-    "Pour half the purple cheesecake mixture into the chill tart crust. Add half the blue and then add the remaining purple and blue in the tart tin. Use a spoon to drizzle some pink cheesecake on top. Use a skewer or the end of a spoon to swirl the pink. Add some small dots of the plain cheesecake mixture to create stars and then sprinkle some more starts on top before chilling for 2 hours.",
-    "Slice with a knife to serve",
-  ];
-
-  const img = [
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Pasta",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Pizza",
-    },
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Vegan",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Breakfast",
-    },
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Pasta",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Breakfast",
-    },
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Vegan",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-    },
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Pizza",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Breakfast",
-    },
-  ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Scroll to the top when component mounts
+  }, []);
 
   const [Recipe, setRecipe] = useState([]);
 
@@ -121,16 +73,39 @@ export default function Recipe() {
         setRecipe(New);
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, [params.id]);
 
   const [ld, setld] = useState(12);
   const ldincrement = () => {
     setld((ld) => ld + 6);
   };
 
+  //get sror data
+  const [stor, setStor] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/savedata");
+        setStor(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        alert("Failed to fetch data. Please try again later.");
+      }
+    };
+
+    getData();
+  }, []);
+
+  useEffect(() => {
+    if (stor.includes(parseInt(params.id, 10))) {
+      setIsSaved(true);
+    }
+  }, [params.id, stor]);
+
   return (
     <>
       <Navbar />
+
       <div className="  md:mx-52 ld:mx-52 mx-2 mt-10">
         {Recipe.filter((recipe) => recipe.Id == params.id).map((Item) => (
           <div key={Item.Id}>
@@ -138,6 +113,7 @@ export default function Recipe() {
               <label className="ld:text-4xl md:text-4xl sm:text-2xl text-xl font-bold mx-5">
                 {Item.Name}
               </label>
+              {/* save button */}
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

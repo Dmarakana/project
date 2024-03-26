@@ -163,6 +163,15 @@ export default function Other() {
       .catch((error) => console.error("Error fetching users:", error));
   }, []);
 
+  const [id, setid] = useState("");
+  useEffect(() => {
+    // Fetch categories from the API when the component mounts
+    fetch("http://localhost:3000/userid")
+      .then((response) => response.json())
+      .then((data) => setid(data))
+      .catch((error) => console.error("Error fetching users:", error));
+  }, []);
+
   const [Recipe, setRecipe] = useState([]);
   useEffect(() => {
     // Fetch recipes from the API when the component mounts
@@ -182,19 +191,21 @@ export default function Other() {
 
       <div className="overflow-x-auto whitespace-nowrap justify-center md:my-10 lg:my-10 my-4 md:mx-48 lg:mx-48 scrollbar-hidden">
         {Categories.map((data, index) => (
-          <div key={index} className="inline-block  md:mx-4 lg:mx-4 mx-3">
-            <div className="rounded-full overflow-hidden">
-              <img
-                className="md:w-44 lg:w-44 md:h-44 lg:h-44 w-24 h-24 object-cover"
-                src={data.src}
-                alt={`Image ${index + 1}`}
-                onLoad={handleImageLoad}
-              />
+          <Link to={`/Recipes/${data.catagories}`} key={index}>
+            <div className="inline-block  md:mx-4 lg:mx-4 mx-3">
+              <div className="rounded-full overflow-hidden">
+                <img
+                  className="md:w-44 lg:w-44 md:h-44 lg:h-44 w-24 h-24 object-cover"
+                  src={data.src}
+                  alt={`Image ${index + 1}`}
+                  onLoad={handleImageLoad}
+                />
+              </div>
+              <p className="text-center font-bold md:text-2xl ld:text-2xl md:mt-3 ld:mt-3 mt-1">
+                {data.catagories}
+              </p>
             </div>
-            <p className="text-center font-bold md:text-2xl ld:text-2xl md:mt-3 ld:mt-3 mt-1">
-              {data.catagories}
-            </p>
-          </div>
+          </Link>
         ))}
       </div>
 

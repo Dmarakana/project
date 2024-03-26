@@ -7,7 +7,13 @@ import { useParams } from "react-router-dom";
 
 export default function CategoriesRecipe() {
   const params = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [params.catagory]);
+
   console.log(params.catagory);
+
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < rating; i++) {

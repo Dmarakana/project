@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Sign() {
   const [username, setUsername] = useState("");
@@ -8,26 +8,50 @@ function Sign() {
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [emailerror, setemailerror] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/Sendotp", {
-      state: { pemail: email, pfname: username, ppassword: password },
-    });
+
     console.log("Email:", email);
     console.log("Password:", password);
   };
 
   const navigate = useNavigate();
 
+  const check = async () => {
+    setLoading(true);
+
+    try {
+      const response = await axios.post("http://localhost:3000/emailcheck", {
+        email: email,
+      });
+      if (response.data == true) {
+        setemailerror("This email is already registered");
+      } else {
+        navigate("/Sendotp", {
+          state: { pemail: email, pfname: username, ppassword: password },
+        });
+      }
+    } catch (error) {
+      console.error("Error : ", error);
+      alert("Something went wrong.");
+    } finally {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    }
+  };
+
   return (
     <div className="min-h-screen relative flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y border border-zinc-950 p-12 rounded-lg relative">
-        <NavLink to="/">
+        {/* <NavLink to="/">
           <button className="absolute top-0 right-0 mt-5 -mr-2 rounded-full p-1 focus:outline-none">
             <img src="cross.png" alt="Cross Button" className="h-6 w-6 mr-8 " />
           </button>
-        </NavLink>
+        </NavLink> */}
 
         <div>
           <h2 className="mt-5 text-4xl font-bold text">SIGN UP</h2>
@@ -48,7 +72,7 @@ function Sign() {
                 autoComplete="username"
                 required
                 value={username}
-                onChange={(e) => setUsername(e.target.value).trim()}
+                onChange={(e) => setUsername(e.target.value)}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
                 placeholder="Full Name"
               />
@@ -71,11 +95,20 @@ function Sign() {
                 autoComplete="email"
                 required
                 value={email}
-                onChange={(e) => setEmail(e.target.value).trim()}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setemailerror("");
+                }}
+                onKeyPress={(e) => {
+                  if (e.key === " ") {
+                    e.preventDefault();
+                  }
+                }}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
                 placeholder="Email"
               />
             </div>
+            <span className="text-red-600">{emailerror}</span>
           </div>
           <div>
             <div className="relative">
@@ -139,15 +172,20 @@ function Sign() {
             </div>
           </div>
 
-          <div>
-            {/* <NavLink to="/Sendotp" state={{ pemail: email }}> */}
-            <button
-              type="submit"
-              className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
-            >
-              Sign up
-            </button>
-            {/* </NavLink> */}
+          <div className="mt-9 text-center">
+            {loading ? (
+              <div className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none">
+                <div className="animate-spin rounded-full h-7 w-7 border-t-2 border-b-2 border-white"></div>
+              </div>
+            ) : (
+              <button
+                onClick={check}
+                type="submit"
+                className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
+              >
+                Sign up
+              </button>
+            )}
           </div>
         </form>
         <div className="mt-7 text-left">
