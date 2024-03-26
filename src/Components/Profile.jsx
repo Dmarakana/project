@@ -22,7 +22,7 @@ export default function Profile() {
     fetch("http://localhost:3000/profiledata")
       .then((response) => response.json())
       .then((data) => {
-        setImage(data.image);
+        setimg(data.image);
         setemail(data.email);
         setusername(data.username);
         setfullname(data.fullname);
