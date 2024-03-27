@@ -6,8 +6,15 @@ import {
   FaSearch,
   FaYoutube,
 } from "react-icons/fa";
+import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ handleInputChange }) {
+  const [search, setsearch] = useState("");
+  const handleChange = (event) => {
+    const newValue = event.target.value;
+    setsearch(newValue);
+    handleInputChange(newValue);
+  };
   return (
     <>
       <nav className="p-4  top-0 left-0 right-0  bg-white shadow-md sticky z-10 ">
@@ -34,6 +41,8 @@ export default function Navbar() {
                 type="text"
                 placeholder="Search"
                 className="bg-gray-800 text-white rounded-full py-1 pr-8 pl-4  md:w-96 ld:w-96 focus:outline-none focus:bg-gray-900"
+                value={search}
+                onChange={handleChange}
               />
 
               <span className="absolute right-2  mt-2 mr-3 w-2 h-2">

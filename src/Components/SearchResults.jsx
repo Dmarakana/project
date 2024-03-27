@@ -1,59 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export default function SearchResults() {
-  const [width, setWidth] = useState(950); // Initial width
-  const [height, setHeight] = useState("auto"); // Initial height set to auto
+export default function SearchResults(props) {
+  const { data } = props;
 
-  // Function to handle image load event
-  const handleImageLoad = (event) => {
-    // Change the image's width and height here
-    setWidth(event.target.width / 2); // for example, halving the width
-    setHeight(event.target.height / 2); // for example, halving the height
+  const [filteredRecipes, setFilteredRecipes] = useState([]);
+
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 0; i < rating; i++) {
+      stars.push(
+        <span key={i} className="text-orange-400 text-xl">
+          &#9733;
+        </span>
+      );
+    }
+    for (let i = 0; i < 5 - rating; i++) {
+      stars.push(
+        <span key={i} className="text-orange-400 text-xl">
+          &#9734;
+        </span>
+      );
+    }
+    return stars;
   };
 
-  const img = [
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Pasta",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Pizza",
-    },
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Vegan",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Breakfast",
-    },
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Pasta",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Breakfast",
-    },
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Vegan",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Vegan",
-    },
-    {
-      src: "https://hips.hearstapps.com/hmg-prod/images/packed-lunch-ideas-646e6dbed0303.jpeg?crop=1xw:0.75xh;center,top&resize=1200:*",
-      text: "Pizza",
-    },
-    {
-      src: "https://assets.epicurious.com/photos/5df7bb4bb6b82900083f1e4a/16:9/w_4346,h_2445,c_limit/COOK90_SaladPowerSprinkle_HERO_120519_13790.jpg",
-      text: "Breakfast",
-    },
-    // Add more image URLs as needed
-  ];
+  const [Recipe, setRecipe] = useState([]);
+  useEffect(() => {
+    // Fetch recipes from the API when the component mounts
+    fetch("http://localhost:3000/api/recipe")
+      .then((response) => response.json())
+      .then((data) => setRecipe(data))
+      .catch((error) => console.error("Error fetching users:", error));
+  }, []);
+
+  // Filter recipes based on search input
+  useEffect(() => {
+    const filtered = Recipe.filter((recipe) =>
+      recipe.Name.toLowerCase().includes(data.toLowerCase())
+    );
+    setFilteredRecipes(filtered);
+  }, [data, Recipe]);
 
   return (
     <>
@@ -63,31 +50,30 @@ export default function SearchResults() {
         </label>
       </div>
 
-      <div className=" justify-center md:my-10 lg:my-10 my-4 md:ml-48 lg:ml-40 ">
-        {img.map((imgSrc, index) => (
-          <div key={index} className="inline-block  md:mx-4 lg:mx-7 mx-3 mt-8 ">
-            <div className="">
-              <img
-                className="md:w-56 lg:w-64 md:h-44 lg:h-44 w-24 h-24 object-cover"
-                src={imgSrc.src}
-                alt={`Image ${index + 1}`}
-                onLoad={handleImageLoad}
-              />
-            </div>
-            <p className="text-center font-bold md:text-2xl ld:text-2xl md:mt-3 ld:mt-3 mt-1">
-              {imgSrc.text}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex justify-center my-16">
-        <button
-          className="border-solid border-2 border-gray-950 text-sb  px-6 py-2"
-          type="button"
-        >
-          Load More
-        </button>
+      <div className="justify-center  md:mx-52 lg:ml-52 lg:mr-52 grid grid-cols-2 lg:grid-cols-4  mx-4 ld:gap-x-96  gap-x-4 mb-16 ">
+        {filteredRecipes
+          .sort(() => Math.random() - 0.5)
+          .map((item, index) => (
+            <Link to={`/Recipe/${item.Id}`} key={index}>
+              <div className="max-w-xs mx-auto overflow-hidden shadow-lg rounded-lg md:mt-10 ld:mt-10 mt-4 ">
+                <img
+                  className="w-full"
+                  src={item.Src}
+                  alt={item.Id}
+                  style={{ width: "300px", height: "250px" }}
+                />
+                <div className="p-4">
+                  <div className=" flex items-center">
+                    {/* Render star icons */}
+                    {renderStars(item.Star)}
+                  </div>
+                  <h2 className="text-gray-800 text-lg font-semibold px-1">
+                    {item.Name}
+                  </h2>
+                </div>
+              </div>
+            </Link>
+          ))}
       </div>
     </>
   );

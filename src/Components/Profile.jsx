@@ -1,21 +1,12 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Profile() {
-  const [id, setid] = useState("");
   const [img, setimg] = useState(null);
   const [username, setusername] = useState("");
   const [email, setemail] = useState("");
   const [fullname, setfullname] = useState("");
 
-  useEffect(() => {
-    // Fetch categories from the API when the component mounts
-    fetch("http://localhost:3000/userid")
-      .then((response) => response.json())
-      .then((data) => setid(data))
-      .catch((error) => console.error("Error fetching users:", error));
-  }, []);
   useEffect(() => {
     // Fetch categories from the API when the component mounts
     fetch("http://localhost:3000/profiledata")

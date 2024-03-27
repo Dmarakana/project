@@ -1,18 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import Recipe from "./Recipe";
-import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 export default function Other() {
-  const [width, setWidth] = useState(950); // Initial width
-  const [height, setHeight] = useState("auto"); // Initial height set to auto
-
-  // Function to handle image load event
-  const handleImageLoad = (event) => {
-    // Change the image's width and height here
-    setWidth(event.target.width / 2); // for example, halving the width
-    setHeight(event.target.height / 2); // for example, halving the height
-  };
-
   const img = [
     {
       src: "wallpaperflare.com_wallpaper (6).jpg",
@@ -163,15 +152,6 @@ export default function Other() {
       .catch((error) => console.error("Error fetching users:", error));
   }, []);
 
-  const [id, setid] = useState("");
-  useEffect(() => {
-    // Fetch categories from the API when the component mounts
-    fetch("http://localhost:3000/userid")
-      .then((response) => response.json())
-      .then((data) => setid(data))
-      .catch((error) => console.error("Error fetching users:", error));
-  }, []);
-
   const [Recipe, setRecipe] = useState([]);
   useEffect(() => {
     // Fetch recipes from the API when the component mounts
@@ -198,7 +178,6 @@ export default function Other() {
                   className="md:w-44 lg:w-44 md:h-44 lg:h-44 w-24 h-24 object-cover"
                   src={data.src}
                   alt={`Image ${index + 1}`}
-                  onLoad={handleImageLoad}
                 />
               </div>
               <p className="text-center font-bold md:text-2xl ld:text-2xl md:mt-3 ld:mt-3 mt-1">
@@ -234,7 +213,7 @@ export default function Other() {
                     {renderStars(item.Star)}
                   </div>
                   <h2 className="text-gray-800 text-lg font-semibold px-1">
-                    {item.Id}&nbsp;{item.Name}
+                    {item.Name}
                   </h2>
                 </div>
               </div>
@@ -267,7 +246,6 @@ export default function Other() {
               className="w-full h-full"
               src={item.imageUrl}
               alt={item.title}
-              onLoad={handleImageLoad}
               style={{ width: "900px", height: "270px" }}
             />
             <div className="p-4">
