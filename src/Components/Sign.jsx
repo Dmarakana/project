@@ -11,13 +11,6 @@ function Sign() {
   const [loading, setLoading] = useState(false);
   const [emailerror, setemailerror] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log("Email:", email);
-    console.log("Password:", password);
-  };
-
   const navigate = useNavigate();
 
   const check = async () => {
@@ -57,7 +50,7 @@ function Sign() {
           <h2 className="mt-5 text-4xl font-bold text">SIGN UP</h2>
         </div>
 
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+        <form className="mt-8 space-y-6">
           <input type="hidden" name="remember" defaultValue="true" />
 
           <div>

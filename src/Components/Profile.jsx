@@ -22,6 +22,7 @@ export default function Profile() {
       .then((response) => response.json())
       .then((data) => {
         setimg(data.image);
+        setImage(data.image);
         setemail(data.email);
         setusername(data.username);
         setfullname(data.fullname);
@@ -127,8 +128,8 @@ export default function Profile() {
               name="fullname"
               type="text"
               className="pl-6 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 focus:outline-none focus:border-b-black w-full"
-              value={fullname}
-              onChange={handlefullnameChange}
+              value={username}
+              onChange={handleusernameChange}
             />
             <img src="user.png " className="h-5 w-6 mb-5 -mt-6" />
           </div>
@@ -142,8 +143,8 @@ export default function Profile() {
                 name="username"
                 type="text"
                 className="pl-6 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 focus:outline-none focus:border-b-black w-full"
-                value={username}
-                onChange={handleusernameChange}
+                value={fullname}
+                onChange={handlefullnameChange}
               />
               <img src="arroba.png " className="h-5 w-5 mb-5 -mt-6 " />
             </div>
