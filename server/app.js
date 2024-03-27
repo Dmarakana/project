@@ -244,7 +244,7 @@ app.get("/userid", async (req, res) => {
 
 app.post("/remove", async (req, res) => {
   const { stor } = req.body;
-  console.log(stor);
+
   try {
     await User.findByIdAndUpdate(
       userid,
