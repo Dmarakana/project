@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const EmailVerification = () => {
+  const [message, setMessage] = useState("");
   const inputRefs = [
     useRef(null),
     useRef(null),
@@ -16,14 +17,15 @@ const EmailVerification = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [otp, setOtp] = useState(""); // State to store OTP
+  const [otp, setOtp] = useState("");
 
   const [countdown, setCountdown] = useState(30);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const handleChange = (index, e) => {
     const input = e.target;
-    let value = input.value.replace(/\D/, ""); // Remove non-numeric characters
+    let value = input.value.replace(/\D/g, "");
+    input.value = value;
 
     if (value.length === 1 && index < inputRefs.length - 1) {
       inputRefs[index + 1].current.focus();
@@ -41,6 +43,7 @@ const EmailVerification = () => {
   };
 
   const [loading, setLoading] = useState(false);
+
   const sendEmail = async () => {
     // Clear input fields
     setCountdown(15);
@@ -60,6 +63,11 @@ const EmailVerification = () => {
   };
 
   const check = async () => {
+    if (!otp || otp.length !== 5 || !/^\d+$/.test(otp)) {
+      setMessage("Please enter a OTP.");
+      return false;
+    }
+
     setLoading(true);
 
     try {
@@ -72,6 +80,13 @@ const EmailVerification = () => {
       if (response.data == true) {
         setTimeout(() => {
           navigate("/");
+        }, 1000);
+      } else {
+        // setmessage("Invalid Otp.");
+
+        setTimeout(() => {
+          setLoading(false);
+          setMessage("Invalid OTP. Please enter a valid OTP.");
         }, 1000);
       }
     } catch (error) {
@@ -121,6 +136,10 @@ const EmailVerification = () => {
                 ))}
               </div>
             </div>
+
+            <span className="text-center text-red-600 font-medium">
+              <p className="mt-2">{message}</p>
+            </span>
 
             <div className="mt-9 text-center">
               {loading ? (

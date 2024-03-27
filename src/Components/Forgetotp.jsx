@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Forgetotp = () => {
+  const [message, setMessage] = useState("");
   const inputRefs = [
     useRef(null),
     useRef(null),
@@ -23,7 +24,8 @@ const Forgetotp = () => {
 
   const handleChange = (index, e) => {
     const input = e.target;
-    let value = input.value.replace(/\D/, ""); // Remove non-numeric characters
+    let value = input.value.replace(/\D/g, "");
+    input.value = value;
 
     if (value.length === 1 && index < inputRefs.length - 1) {
       inputRefs[index + 1].current.focus();
@@ -41,6 +43,7 @@ const Forgetotp = () => {
   };
 
   const [loading, setLoading] = useState(false);
+
   const sendEmail = async () => {
     // Clear input fields
     setCountdown(15);
@@ -60,6 +63,10 @@ const Forgetotp = () => {
   };
 
   const check = async () => {
+    if (!otp || otp.length !== 5 || !/^\d+$/.test(otp)) {
+      setMessage("Please enter a OTP.");
+      return false;
+    }
     setLoading(true);
 
     try {
@@ -77,6 +84,11 @@ const Forgetotp = () => {
               email: location.state.email,
             },
           });
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          setLoading(false);
+          setMessage("Invalid OTP. Please enter a valid OTP.");
         }, 1000);
       }
     } catch (error) {
@@ -126,6 +138,10 @@ const Forgetotp = () => {
                 ))}
               </div>
             </div>
+
+            <span className="text-center text-red-600 font-medium">
+              <p className="mt-2">{message}</p>
+            </span>
 
             <div className="mt-9 text-center">
               {loading ? (

@@ -9,19 +9,42 @@ function Sign() {
   const [cpassword, setCpassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [emailerror, setemailerror] = useState("");
+
+  const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
 
-  const check = async () => {
-    setLoading(true);
+  const validateForm = () => {
+    if (!username || !email || !password || !cpassword) {
+      setMessage("Please fill all fields.");
+      return false;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setMessage("Please enter a valid email address.");
+      return false;
+    }
+    if (password.length < 6) {
+      setMessage("Password must be at least 6 characters long.");
+      return false;
+    }
+    if (password !== cpassword) {
+      setMessage("Conform Passwords must be same.");
+      return false;
+    }
+    return true;
+  };
 
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    setLoading(true);
     try {
       const response = await axios.post("http://localhost:3000/emailcheck", {
         email: email,
       });
-      if (response.data == true) {
-        setemailerror("This email is already registered");
+      if (response.data === true) {
+        setMessage("This email is already registered.");
       } else {
         navigate("/Sendotp", {
           state: { pemail: email, pfname: username, ppassword: password },
@@ -31,9 +54,7 @@ function Sign() {
       console.error("Error : ", error);
       alert("Something went wrong.");
     } finally {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+      setLoading(false);
     }
   };
 
@@ -63,7 +84,6 @@ function Sign() {
                 name="username"
                 type="text"
                 autoComplete="username"
-                required
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
@@ -86,11 +106,9 @@ function Sign() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                required
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
-                  setemailerror("");
                 }}
                 onKeyPress={(e) => {
                   if (e.key === " ") {
@@ -101,7 +119,6 @@ function Sign() {
                 placeholder="Email"
               />
             </div>
-            <span className="text-red-600">{emailerror}</span>
           </div>
           <div>
             <div className="relative">
@@ -116,7 +133,6 @@ function Sign() {
                 id="password"
                 name="password"
                 type={showPassword ? "text" : "password"}
-                required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
@@ -137,7 +153,6 @@ function Sign() {
                 id="cpassword"
                 name="cpassword"
                 type={showPassword ? "text" : "password"}
-                required
                 value={cpassword}
                 onChange={(e) => setCpassword(e.target.value)}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
@@ -165,6 +180,10 @@ function Sign() {
             </div>
           </div>
 
+          <span className=" text-red-600 font-medium">
+            <p className="mt-2">{message}</p>
+          </span>
+
           <div className="mt-9 text-center">
             {loading ? (
               <div className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none">
@@ -172,7 +191,7 @@ function Sign() {
               </div>
             ) : (
               <button
-                onClick={check}
+                onClick={handleFormSubmit}
                 type="submit"
                 className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
               >
@@ -181,14 +200,6 @@ function Sign() {
             )}
           </div>
         </form>
-        <div className="mt-7 text-left">
-          <p className="text-gray-800">
-            Bycreating an account, you agree to our <br />
-            <a href="/" className="font-medium text-1xl text-orange-500">
-              Term & Condition
-            </a>
-          </p>
-        </div>
       </div>
     </div>
   );

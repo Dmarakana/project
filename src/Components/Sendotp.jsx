@@ -35,11 +35,6 @@ function Sendotp() {
   return (
     <div className="min-h-screen relative flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y border border-zinc-950 p-12 rounded-lg relative">
-        <NavLink to="/Home">
-          <button className="absolute top-0 right-0 mt-5 -mr-2 rounded-full p-1 focus:outline-none">
-            <img src="cross.png" alt="Cross Button" className="h-6 w-6 mr-8 " />
-          </button>
-        </NavLink>
         <div>
           <h2 className="mt-8 text-4xl font-bold text">SEND OTP</h2>
         </div>

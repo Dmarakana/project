@@ -5,23 +5,31 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 
 function Newpassword() {
-  const [error, seterror] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (password == cpassword) {
-      console.log(" ");
-    } else {
-      seterror("password must be same");
+  const validatePasswords = () => {
+    if (password.trim() === "") {
+      setMessage("Please enter a password.");
+      return false;
+    } else if (password.length < 6) {
+      setMessage("Password must be at least 6 characters long.");
+      return false;
+    } else if (password !== cpassword) {
+      setMessage("Conform Passwords must be same.");
+      return false;
     }
+    return true;
   };
 
   const update = async () => {
+    if (!validatePasswords()) {
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -37,8 +45,6 @@ function Newpassword() {
         setTimeout(() => {
           navigate("/");
         }, 1000);
-      } else {
-        seterror("Password update error");
       }
     } catch (error) {
       console.error("Error : ", error);
@@ -81,7 +87,6 @@ function Newpassword() {
                 id="password"
                 name="password"
                 type={showPassword ? "text" : "password"}
-                required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
@@ -102,7 +107,6 @@ function Newpassword() {
                 id="cpassword"
                 name="cpassword"
                 type={showPassword ? "text" : "password"}
-                required
                 value={cpassword}
                 onChange={(e) => setCpassword(e.target.value)}
                 className="pl-11 mb-4 border-solid border-t-0 border-l-0 border-r-0 border-b-stone-400 border-b-2 w-full px-10 py-2 sm:text-1.5xl focus:outline-none"
@@ -130,22 +134,26 @@ function Newpassword() {
             </div>
           </div>
 
-          <div className="mt-9 text-center">
-            {loading ? (
-              <div className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none">
-                <div className="animate-spin rounded-full h-7 w-7 border-t-2 border-b-2 border-white"></div>
-              </div>
-            ) : (
-              <button
-                onClick={update}
-                type="submit"
-                className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
-              >
-                Save
-              </button>
-            )}
-          </div>
+          <span className=" text-red-600 font-medium">
+            <p className="mt-2">{message}</p>
+          </span>
         </form>
+
+        <div className="mt-9 text-center">
+          {loading ? (
+            <div className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none">
+              <div className="animate-spin rounded-full h-7 w-7 border-t-2 border-b-2 border-white"></div>
+            </div>
+          ) : (
+            <button
+              onClick={update}
+              type="submit"
+              className="mt-2 group relative w-full inline-flex justify-center items-center py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-orange-500 focus:outline-none"
+            >
+              Save
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

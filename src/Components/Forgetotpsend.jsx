@@ -6,11 +6,16 @@ import axios from "axios";
 function Forgetotpsend() {
   const [loading, setLoading] = useState(false); // State to manage loading state
   const [email, setemail] = useState("");
-  const [error, seterror] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
   const check = async () => {
+    if (!email) {
+      setError("Email is required");
+      setLoading(false);
+      return;
+    }
     setLoading(true);
 
     try {
@@ -34,7 +39,7 @@ function Forgetotpsend() {
           alert("Failed to send OTP. Please try again later.");
         }
       } else {
-        seterror("Invalid Email Address");
+        setError("Invalid Email Address");
       }
     } catch (error) {
       console.error("Error : ", error);
@@ -87,7 +92,9 @@ function Forgetotpsend() {
           </p>
         </div>
 
-        <span className="text-red-600">{error}</span>
+        <span className=" text-center text-red-600 font-medium">
+          <p className="mt-2">{error}</p>
+        </span>
 
         <div className="mt-9 text-center">
           {loading ? (
