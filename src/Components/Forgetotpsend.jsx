@@ -22,12 +22,13 @@ function Forgetotpsend() {
           axios.post("http://localhost:3000/send-email", {
             to: email,
           });
-
-          navigate("/Forgetotp", {
-            state: {
-              email: email,
-            },
-          });
+          setTimeout(() => {
+            navigate("/Forgetotp", {
+              state: {
+                email: email,
+              },
+            });
+          }, 1000);
         } catch (error) {
           console.error("Error sending OTP email:", error);
           alert("Failed to send OTP. Please try again later.");
